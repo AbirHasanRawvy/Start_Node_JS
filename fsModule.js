@@ -20,3 +20,5 @@ fs.mkdirSync('newFolder')
 
 //folder delete
 fs.rmdirSync('newFolder');
+
+//Asyncronous Mode;
