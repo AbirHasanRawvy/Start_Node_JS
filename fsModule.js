@@ -5,7 +5,7 @@ const fs = require('fs');
 fs.writeFileSync('hello.txt', 'Hello Node Js');
 
 //file read;
-let result = fs.readFileSync('hello.txt', 'utf-8');
+// let result = fs.readFileSync('hello.txt', 'utf-8');
 
 console.log(result);
 
@@ -16,9 +16,16 @@ fs.appendFileSync('hello.txt', 'This is new text')
 fs.unlinkSync('hello.txt')
 
 //create folder
-fs.mkdirSync('newFolder')
+// fs.mkdirSync('newFolder')
 
 //folder delete
-fs.rmdirSync('newFolder');
+// fs.rmdirSync('newFolder');
 
 //Asyncronous Mode;
+fs.readFile("hello1.txt", 'utf8', (err, data)=>{
+    if(err){
+        console.log(err);
+    }else{
+        console.log(data);
+    }
+});
