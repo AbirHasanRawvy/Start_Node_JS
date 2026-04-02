@@ -9,3 +9,10 @@ const myPromise = new Promise((resolve, rejected) => {
         rejected("Error!");
     }
 });
+
+myPromise.then((result) => {
+    console.log("The result is: ", result);
+}).catch((error) => {
+
+    console.log("The error is : ", error);
+});
