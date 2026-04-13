@@ -1,25 +1,25 @@
-///node is javascript run time invironment;
-console.log("Hello World!");
+// ///node is javascript run time invironment;
+// console.log("Hello World!");
 
-///Why node JS: 
-//create web server,  API(Aplication Programable Interface), File, CLI(Command line interface),
-//connect with database, asynchronous, non-blocking IO, event loop linten;
+// ///Why node JS: 
+// //create web server,  API(Aplication Programable Interface), File, CLI(Command line interface),
+// //connect with database, asynchronous, non-blocking IO, event loop linten;
 
-//here practice on global object;
-//folder name;
-console.log(__dirname);
+// //here practice on global object;
+// //folder name;
+// console.log(__dirname);
 
-//filename;
-console.log(__filename);
+// //filename;
+// console.log(__filename);
 
-//important information;
-console.log(process.platform);
+// //important information;
+// console.log(process.platform);
 
-//error;
-console.error("New Error");
+// //error;
+// console.error("New Error");
 
-//
-console.warn("New Error");
+// //
+// console.warn("New Error");
 
 // //
 // const path = require("path");
@@ -43,12 +43,12 @@ console.warn("New Error");
 // });
 
 ///HTTP;
-const http = require("http");//This is a module from node js which is talk with broweser;
+// const http = require("http");//This is a module from node js which is talk with broweser;
 
-const server = http.createServer((_, res) => {
-    res.writeHead(200, { "Content-Type" : "application/json"}); //this is a header and its detect the type;
-    res.end(JSON.stringify({ name: "Abrar", course: "MERN Stack" }));
-});
+// const server = http.createServer((_, res) => {
+//     res.writeHead(200, { "Content-Type" : "application/json"}); //this is a header and its detect the type;
+//     res.end(JSON.stringify({ name: "Abrar", course: "MERN Stack" }));
+// });
 
 // server.listen(5000, () => console.log("Server running on 5000 port"));
 
@@ -65,4 +65,19 @@ const server = http.createServer((_, res) => {
 //     }
 // });
 
-server.listen(3000, () => console.log("Server running on 3000 port"));
+// server.listen(3000, () => console.log("Server running on 3000 port"));
+
+
+
+//With Query;
+// const url = require("url");
+// const http = require("http");
+// const server = http.createServer((req, res) => {
+//     const query = url.parse(req.url, true).query;
+//     res.end(`Hello ${query.name}`);
+// });
+// server.listen(3000, () => console.log("Server running on 3000 port"));
+
+
+//call back function;
+
