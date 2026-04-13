@@ -108,3 +108,9 @@
 //  .then((res) => console.log(res))
 //  .catch((err) => console.log(err))
 //  .finally(() => console.log("Promise finished!"));
+
+
+//use strict;
+"use strict";
+ x = 10;
+console.log(x);
