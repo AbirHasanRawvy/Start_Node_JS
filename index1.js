@@ -81,3 +81,30 @@
 
 //call back function;
 
+// function great(name, callback) {
+//     console.log("Hello " + name);
+//     callback();
+// }
+
+// great("Abir!", () => console.log("Welcome to SE."));
+
+
+
+//Promise;
+
+// const myPromise = new Promise((resolve, reject) => {
+//     let success = true;
+
+//     setTimeout(() => {
+//         if(success){
+//             resolve("Task is done!");
+//         }else {
+//             reject("Something went wrong!");
+//         }
+//     }, 5000);
+// });
+
+// myPromise
+//  .then((res) => console.log(res))
+//  .catch((err) => console.log(err))
+//  .finally(() => console.log("Promise finished!"));
