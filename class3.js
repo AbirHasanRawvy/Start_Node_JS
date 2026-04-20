@@ -81,18 +81,56 @@ console.log("===========================================");
 //Destructor: Outside work is done and autometically data will be deleted;
 
 class Rectangle {
+    // constructor(radius){
+    //     this.radius = radius;
+    // }
     constructor(width, height){
         if (width <= 0 || height <= 0) throw new Error("Invalid Size");
         this.width = width;
         this.height = height;
     }
 
+    redArea() {
+        return this.radius * radius;
+    }
     area() {
-        return this.width = this.height;
+        return this.width * this.height;
     }
 }
 
 const r1 = new Rectangle(4, 5);
-console.log(r1.area());
+// const r2 = new Rectangle(4);
+console.log("The ractangle area is: "+r1.area()+".");
+// console.log(r2.redArearea());
 console.log("===========================================");
-//Solid principle;
+//Solid principle: Means single resonsibility like a function work for its main one work;
+
+
+//Inheritance;
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    sound() {
+        console.log(`${this.name} makes a sound`);
+    }
+}
+
+class Dog extends Animal {
+    sound() {
+        console.log(`${this.name} barks`);
+    }
+}
+
+class Cat extends Animal {
+    sound() {
+        console.log(`${this.name} meow`);
+    }
+}
+
+const d1 = new Dog("Tarzen");
+d1.sound();
+
+const cat = new Cat("Tarzen");
+cat.sound();
+console.log("===========================================");
