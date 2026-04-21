@@ -134,3 +134,138 @@ d1.sound();
 const cat = new Cat("Tarzen");
 cat.sound();
 console.log("===========================================");
+
+//Another one;
+class Vehicle {
+    constructor(brand) {
+        this.brand = brand;
+    }
+}
+
+class Bike extends Vehicle {
+    constructor(brand, cc){
+        super(brand);
+        this.cc = cc;
+    }
+}
+
+const b = new Bike("Yamaha", 150);
+console.log(b);
+console.log("===========================================");
+
+//Overriding: Child class replaces parent method with a new implementation;
+//Runtime Polymorohijom;
+class Payment {
+    pay(amount) {
+        console.log(`Paying ${amount}`);
+    }
+}
+
+class BkashPayment extends Payment {
+    pay(amount) {
+        console.log(`Paying ${amount} via Bkash.`);
+    }
+}
+
+class CardPayment extends Payment {
+    pay(amount) {
+        console.log(`Paying ${amount} via Card.`);
+    }
+}
+
+function checkout(payment, amount) {
+    payment.pay(amount);
+}
+
+checkout(new BkashPayment(), 500);
+checkout(new CardPayment(), 500);
+
+console.log("===========================================");
+
+//Polymorphijom;
+
+class Shape {
+    area() {
+        throw new Error("Implement in subclass");
+    }
+}
+
+class Circle extends Shape {
+    constructor(r) {
+        super();
+        this.r = r;
+    }
+
+    area() {
+        return Math.PI * this.r ** 2;
+    }
+}
+
+class Rectangle1 extends Shape {
+    constructor(w, h) {
+        super();
+        this.w = w;
+        this.h = h;
+    }
+
+    area() {
+        return this.w * this.h;
+    }
+}
+
+const shapes = [new Circle(3), new Rectangle1(4,5)];
+
+for (const s of shapes) {
+    console.log(s.area());
+   
+}
+
+console.log("===========================================");
+
+//Abstraction: not possible to create a instance from parent class but create instance from child class;
+
+
+// class StorageService {
+//     //pseudo-absteact method;
+//     save(key, value) {
+//         throw new Error("Save must be implemented.");
+//     }
+// }
+
+// class localStorageService extends StorageService {
+//     save(key, value){
+//         localStorage.setItem(key, JSON.stringify(value));
+//     }
+// }
+
+// const svc = new StorageService();
+// svc.save("user", { name: "Abir" });
+
+console.log("===========================================");
+
+//Map;
+
+const map = new Map();
+
+const objkey = { id: 1};
+
+map.set("name", "Amazon");
+map.set(Object, [1, 2, 3]);
+
+console.log(map.get("name"));
+console.log(map.get(Object));
+
+map.delete("name");
+
+console.log(map.has("name"));
+map.clear();
+
+console.log("===========================================");
+
+//Set: Much more important;
+
+const arr = [1, 2, 2, 4, 5, 6, 6, 1];
+console.log([...new Set(arr)]);
+
+console.log("===========================================");
+
